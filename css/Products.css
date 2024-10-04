@@ -1,0 +1,228 @@
+* {
+  font-family: "GFS Didot";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+#hamburger {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100000;
+}
+
+.header .logo {
+  height: 3rem;
+}
+
+.header-list a {
+  color: white;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 2rem;
+}
+
+.header-list a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.3rem;
+  border-bottom: 0.1rem solid grey;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.header-list a:hover {
+  color: grey;
+}
+
+.header a:hover {
+  color: grey;
+}
+
+.header-list a:hover::after {
+  transform: scaleX(1);
+}
+
+.header a {
+  color: white;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  height: 10rem;
+}
+
+footer .sosmed {
+  padding: 1rem;
+}
+
+footer .sosmed a {
+  color: white;
+  margin: 1rem;
+}
+
+footer .sosmed a:hover,
+footer .navbar2 a:hover {
+  color: grey;
+}
+
+footer .navbar2 {
+  margin-bottom: 1rem;
+}
+footer .navbar2 a {
+  color: white;
+  padding: 0.7rem 1rem;
+}
+
+footer .copyright p {
+  color: white;
+}
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 800px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hamburger {
+    display: inline-block;
+  }
+
+  .header-list {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: black;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.4s;
+  }
+
+  .header-list.active {
+    right: 0;
+  }
+
+  .header-list a {
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .header-list a:hover::after {
+    transform: scaleX(0.3);
+  }
+
+  .header-list #list-home:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .header-list a::after {
+    transform-origin: 0;
+  }
+}
+
+/* Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.content {
+  margin-top: 7rem;
+  /* padding: 1rem 9%; */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 2px solid rgb(162, 160, 160);
+  border-radius: 10px;
+  margin: 1.5rem;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  background-color: white;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.row-products {
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); */
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+}
+
+.products-img {
+  width: 20rem;
+}
+
+.box {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  display: none;
+  border-radius: 10%;
+}
+
+.show {
+  display: block;
+}
+
+.under {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 9%;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+}
+.under a {
+  padding: 1rem;
+  color: white;
+}
+
+.under a:hover {
+  color: grey;
+}
+
+.box:hover {
+  box-shadow: 0 0.3rem 1.5rem rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
